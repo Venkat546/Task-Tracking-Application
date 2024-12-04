@@ -18,15 +18,16 @@ The project is built using the following technologies:
 ### 1. Clone the Repository      
 Clone the project repository from GitHub using the following command:        
 
-        bash``` 
+        
             git clone https://github.com/Venkat546/Task-Tracking-Application.git    
             cd Task-Tracking-Application    
-            ```
+            
 
 ### 2. Build the Application    
  Use Maven to clean and build the project:    
-       ```mvn clean install  
-     ```
+ 
+        mvn clean install  
+     
 
 ### 3. Run the Application    
 Start the Spring Boot application using Maven:    
@@ -37,12 +38,12 @@ Start the Spring Boot application using Maven:
 
 ### 4. Access the H2 Database  
 The application uses an in-memory H2 database, which can be accessed via the H2 console at:  
-```
+
     URL: http://localhost:8080/h2-console
     JDBC URL: jdbc:h2:mem:testdb
     Username: sa
     Password: password
-```
+
 
 ## Dependencies  
 
@@ -180,11 +181,11 @@ DELETE /tasks/1
 ### 6. Mark Task as Complete  
 #### Request:  
 
-PATCH ```/tasks/{id}/complete```
+PATCH /tasks/{id}/complete
 
 #### Example:    
 
-PATCH ```/tasks/1/complete```
+PATCH /tasks/1/complete
 
 ### Response:  
 
