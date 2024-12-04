@@ -24,7 +24,7 @@ This is a Spring Boot-based Task Tracking application, where you can manage task
 
 1. Clone the repository:
     ```bash
-    git clone [<repository-url>](https://github.com/Venkat546/Task-Tracking-Application.git)
+    git clone https://github.com/Venkat546/Task-Tracking-Application.git
     cd TaskTrackingApplication
     ```
 
