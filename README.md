@@ -55,13 +55,13 @@ If you wish to use MySQL instead of the H2 database:
 ### 2. Build the Application Locally  
  Use Maven to clean and build the project:    
  
-        ```mvn clean install```  
+        mvn clean install
      
 
 ### 3. Run the Application    
 Start the Spring Boot application using Maven:    
         
-    ```    mvn spring-boot:run  ```
+         mvn spring-boot:run 
         
 **Once the application is running, it will be accessible at http://localhost:8080.**  
 
@@ -119,11 +119,12 @@ You can test the REST API endpoints using Postman by following these steps:
   "description": "Task Description",  
   "dueDate": "YYYY-MM-DD",  
   "status": "PENDING"  
-}    
-           ```
+}
+```
 
 #### Response:  
 
+```
 {  
   "id": 1,  
   "title": "Task Title",  
@@ -131,15 +132,16 @@ You can test the REST API endpoints using Postman by following these steps:
   "dueDate": "YYYY-MM-DD",  
   "status": "PENDING"  
 }  
+```
 
-
-### 2. Get All Tasks  
+### 2. Get All Tasks    
 #### Request:  
 
-GET /tasks
+`GET /tasks`
 
 #### Response:  
 
+```
 [  
   {  
     "id": 1,  
@@ -156,8 +158,10 @@ GET /tasks
     "status": "IN_PROGRESS"  
   }  
 ]  
+```
 
 ### 3. Get Task by ID  
+
 #### Request:  
 
 GET `/tasks/{id}`
@@ -168,7 +172,7 @@ GET `/tasks/1`
 
 #### Response:  
 
-
+```
 {  
   "id": 1,  
   "title": "Task Title",  
@@ -176,20 +180,24 @@ GET `/tasks/1`
   "dueDate": "YYYY-MM-DD",  
   "status": "PENDING"  
 }
-
+```
 
 ### 4. Update a Task  
+
 #### Request:  
 
+```
 {  
   "title": "Updated Task Title",  
   "description": "Updated Description",  
   "dueDate": "YYYY-MM-DD",  
   "status": "IN_PROGRESS"  
 }  
+```
 
 #### Response:    
 
+```
 {  
   "id": 1,  
   "title": "Updated Task Title",  
@@ -197,7 +205,9 @@ GET `/tasks/1`
   "dueDate": "YYYY-MM-DD"  ,
   "status": "IN_PROGRESS"  
 }
-  
+  ```
+
+
 ### 5. Delete a Task  
 #### Request:  
 
@@ -209,9 +219,11 @@ DELETE `/tasks/1`
 
 ### Response:  
 
+```
 {  
   "message": "Task deleted successfully"  
 }
+```
 
 ### 6. Mark Task as Complete  
 #### Request:  
@@ -224,7 +236,7 @@ PATCH `/tasks/1/complete`
 
 ### Response:  
 
-
+```
 {  
   "id": 1,  
   "title": "Task Title",  
@@ -232,6 +244,7 @@ PATCH `/tasks/1/complete`
   "dueDate": "YYYY-MM-DD",  
   "status": "COMPLETED"  
 }
+```
 
 ## Conclusion  
 
