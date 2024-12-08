@@ -112,6 +112,7 @@ You can test the REST API endpoints using Postman by following these steps:
 
 ### 1. Create a Task  
 ##### Request:  
+
 ```
 {  
   "title": "Task Title",  
@@ -123,13 +124,13 @@ You can test the REST API endpoints using Postman by following these steps:
 
 #### Response:  
 
-```{  
+{  
   "id": 1,  
   "title": "Task Title",  
   "description": "Task Description",  
   "dueDate": "YYYY-MM-DD",  
   "status": "PENDING"  
-}  ```
+}  
 
 
 ### 2. Get All Tasks  
@@ -139,7 +140,7 @@ GET /tasks
 
 #### Response:  
 
-```[  
+[  
   {  
     "id": 1,  
     "title": "Task Title",  
@@ -154,7 +155,7 @@ GET /tasks
     "dueDate": "YYYY-MM-DD",  
     "status": "IN_PROGRESS"  
   }  
-]  ```
+]  
 
 ### 3. Get Task by ID  
 #### Request:  
@@ -168,24 +169,24 @@ GET `/tasks/1`
 #### Response:  
 
 
-```{  
+{  
   "id": 1,  
   "title": "Task Title",  
   "description": "Task Description",  
   "dueDate": "YYYY-MM-DD",  
   "status": "PENDING"  
-}```    
+}
 
 
 ### 4. Update a Task  
 #### Request:  
 
-```{  
+{  
   "title": "Updated Task Title",  
   "description": "Updated Description",  
   "dueDate": "YYYY-MM-DD",  
   "status": "IN_PROGRESS"  
-}  ```
+}  
 
 #### Response:    
 
@@ -224,13 +225,13 @@ PATCH `/tasks/1/complete`
 ### Response:  
 
 
-```{  
+{  
   "id": 1,  
   "title": "Task Title",  
   "description": "Task Description",  
   "dueDate": "YYYY-MM-DD",  
   "status": "COMPLETED"  
-}```
+}
 
 ## Conclusion  
 
