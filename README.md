@@ -112,119 +112,126 @@ You can test the REST API endpoints using Postman by following these steps:
 
 ### 1. Create a Task  
 ##### Request:  
-
-{
-  "title": "Task Title",
-  "description": "Task Description",
-  "dueDate": "YYYY-MM-DD",
-  "status": "PENDING"
-}  
-
+```
+{  
+  "title": "Task Title",  
+  "description": "Task Description",  
+  "dueDate": "YYYY-MM-DD",  
+  "status": "PENDING"  
+}    
+           ```
 
 #### Response:  
 
-{
-  "id": 1,
-  "title": "Task Title",
-  "description": "Task Description",
-  "dueDate": "YYYY-MM-DD",
-  "status": "PENDING"
-}  
+```{  
+  "id": 1,  
+  "title": "Task Title",  
+  "description": "Task Description",  
+  "dueDate": "YYYY-MM-DD",  
+  "status": "PENDING"  
+}  ```
 
 
 ### 2. Get All Tasks  
 #### Request:  
 
-            GET /tasks
+GET /tasks
 
 #### Response:  
 
-[
-  {
-    "id": 1,
-    "title": "Task Title",
-    "description": "Task Description",
-    "dueDate": "YYYY-MM-DD",
-    "status": "PENDING"
-  },  
-  {
-    "id": 2,
-    "title": "Another Task",
-    "description": "Another Description",
-    "dueDate": "YYYY-MM-DD",
-    "status": "IN_PROGRESS"
-  }
-]  
+```[  
+  {  
+    "id": 1,  
+    "title": "Task Title",  
+    "description": "Task Description",  
+    "dueDate": "YYYY-MM-DD",  
+    "status": "PENDING"  
+  },    
+  {  
+    "id": 2,  
+    "title": "Another Task",  
+    "description": "Another Description",  
+    "dueDate": "YYYY-MM-DD",  
+    "status": "IN_PROGRESS"  
+  }  
+]  ```
 
 ### 3. Get Task by ID  
 #### Request:  
 
-GET /tasks/{id}
+GET `/tasks/{id}`
 
 #### Example:
 
-GET /tasks/1  
+GET `/tasks/1`  
 
 #### Response:  
 
-{
-  "id": 1,
-  "title": "Task Title",
-  "description": "Task Description",
-  "dueDate": "YYYY-MM-DD",
-  "status": "PENDING"
-}  
+
+```{  
+  "id": 1,  
+  "title": "Task Title",  
+  "description": "Task Description",  
+  "dueDate": "YYYY-MM-DD",  
+  "status": "PENDING"  
+}```    
+
 
 ### 4. Update a Task  
 #### Request:  
 
-{
-  "title": "Updated Task Title",
-  "description": "Updated Description",
-  "dueDate": "YYYY-MM-DD",
-  "status": "IN_PROGRESS"
-}  
-#### Response:  
+```{  
+  "title": "Updated Task Title",  
+  "description": "Updated Description",  
+  "dueDate": "YYYY-MM-DD",  
+  "status": "IN_PROGRESS"  
+}  ```
 
-{
-  "id": 1,
-  "title": "Updated Task Title",
-  "description": "Updated Description",
-  "dueDate": "YYYY-MM-DD",
-  "status": "IN_PROGRESS"
-}  
+#### Response:    
+
+{  
+  "id": 1,  
+  "title": "Updated Task Title",  
+  "description": "Updated Description",  
+  "dueDate": "YYYY-MM-DD"  ,
+  "status": "IN_PROGRESS"  
+}
+  
 ### 5. Delete a Task  
 #### Request:  
 
-DELETE /tasks/{id}
+DELETE `/tasks/{id}`
 
 #### Example:  
 
-DELETE /tasks/1  
+DELETE `/tasks/1`  
 
 ### Response:  
 
-{
-  "message": "Task deleted successfully"
-}  
+{  
+  "message": "Task deleted successfully"  
+}
+
 ### 6. Mark Task as Complete  
 #### Request:  
 
-PATCH /tasks/{id}/complete
+PATCH `/tasks/{id}/complete`
 
 #### Example:    
 
-PATCH /tasks/1/complete
+PATCH `/tasks/1/complete`
 
 ### Response:  
 
-{
-  "id": 1,
-  "title": "Task Title",
-  "description": "Task Description",
-  "dueDate": "YYYY-MM-DD",
-  "status": "COMPLETED"
-}  
+
+```{  
+  "id": 1,  
+  "title": "Task Title",  
+  "description": "Task Description",  
+  "dueDate": "YYYY-MM-DD",  
+  "status": "COMPLETED"  
+}```
+
 ## Conclusion  
 
 The Task Tracking Application is a robust system designed for managing tasks dynamically. It provides CRUD functionality for tasks and enables task completion status updates. The system is built using Spring Boot, with an in-memory H2 database for fast development and testing. Future improvements could include more advanced features such as authentication, pagination, and task prioritization.
